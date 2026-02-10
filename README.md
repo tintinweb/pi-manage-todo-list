@@ -4,9 +4,13 @@ A [Pi](https://pi.dev) extension that replicates VSCode Copilot Chat `manage_tod
 
 > **Status:** Production-ready. Faithful replication of Copilot's manage_todo_list with enhanced visual feedback and session persistence.
 
-https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/demo.mp4
+<img width="600"  alt="image" src="https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/screenshot.png" />
 
-<img width="854" height="368" alt="image" src="https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/screenshot.png" />
+
+
+
+https://github.com/user-attachments/assets/8efa7668-bdd8-4750-9c8b-638f15c32e4a
+
 
 
 
