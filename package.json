@@ -28,7 +28,7 @@
   },
   "pi": {
     "extensions": ["./src/index.ts"],
-    "video": "https://github.com/tintinweb/pi-manage-todo-list/raw/main/demo.mp4",
-    "image": "https://github.com/tintinweb/pi-manage-todo-list/raw/main/screenshot.png"
+    "video": "https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/demo.mp4",
+    "image": "https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/screenshot.png"
   }
 }

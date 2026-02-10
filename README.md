@@ -1,8 +1,14 @@
 # pi-manage-todo-list
 
-A [Pi](https://pi.dev) extension that replicates GitHub Copilot's `manage_todo_list` tool. Track multi-step work with a structured todo list that persists across sessions and displays live progress in a widget above your editor.
+A [Pi](https://pi.dev) extension that replicates VSCode Copilot Chat `manage_todo_list` tool. Track multi-step work with a structured todo list that persists across sessions and displays live progress in a widget above your editor.
 
 > **Status:** Production-ready. Faithful replication of Copilot's manage_todo_list with enhanced visual feedback and session persistence.
+
+https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/demo.mp4
+
+<img width="854" height="368" alt="image" src="https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/screenshot.png" />
+
+
 
 ## Features
 
@@ -13,11 +19,11 @@ A [Pi](https://pi.dev) extension that replicates GitHub Copilot's `manage_todo_l
 - **LLM guidance**: CRITICAL workflow — plan → mark in-progress → complete → mark completed → repeat
 
 ### Enhanced Pi Features
-- ✅ **Live widget** above editor showing real-time progress with status icons
-- ✅ **Session persistence** across switches, forks, and tree navigation
-- ✅ **Themed display** with colors and strikethrough for completed items
-- ✅ **User commands**: `/todos` (toggle/stats) and `/todos clear` (reset)
-- ✅ **Status icons**: `✓` completed, `◉` in-progress, `○` not-started
+- ✓ **Live widget** above editor showing real-time progress with status icons
+- ✓ **Session persistence** across switches, forks, and tree navigation
+- ✓ **Themed display** with colors and strikethrough for completed items
+- ✓ **User commands**: `/todos` (toggle/stats) and `/todos clear` (reset)
+- ✓ **Status icons**: `✓` completed, `◉` in-progress, `○` not-started
 
 ## Install
 
@@ -49,10 +55,10 @@ You: Build a REST API with authentication, rate limiting, and tests.
 
 Agent: I'll break this into a structured todo list:
 [calls manage_todo_list with write operation]
-1. ⏳ Design API endpoints (not-started)
-2. ⏳ Implement authentication middleware (not-started)
-3. ⏳ Add rate limiting (not-started)
-4. ⏳ Write integration tests (not-started)
+1. ○ Design API endpoints (not-started)
+2. ○ Implement authentication middleware (not-started)
+3. ○ Add rate limiting (not-started)
+4. ○ Write integration tests (not-started)
 
 Now starting with the first task...
 [calls manage_todo_list to mark #1 as in-progress]
