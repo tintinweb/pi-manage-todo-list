@@ -1,0 +1,34 @@
+{
+  "name": "pi-manage-todo-list",
+  "version": "1.0.0",
+  "description": "A pi extension that replicates GitHub Copilot's manage_todo_list tool",
+  "author": "tintinweb",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tintinweb/pi-manage-todo-list.git"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "todo",
+    "task-management",
+    "productivity"
+  ],
+  "dependencies": {
+    "@mariozechner/pi-coding-agent": "latest",
+    "@mariozechner/pi-tui": "latest",
+    "@mariozechner/pi-ai": "latest",
+    "@sinclair/typebox": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "pi": {
+    "extensions": ["./src/index.ts"],
+    "video": "https://github.com/tintinweb/pi-manage-todo-list/raw/main/demo.mp4",
+    "image": "https://github.com/tintinweb/pi-manage-todo-list/raw/main/screenshot.png"
+  }
+}
