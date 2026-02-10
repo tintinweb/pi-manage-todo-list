@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/tintinweb/pi-manage-todo-list.git"
   },
+  "homepage": "https://github.com/tintinweb/pi-manage-todo-list#readme",
+  "bugs": {
+    "url": "https://github.com/tintinweb/pi-manage-todo-list/issues"
+  },
   "keywords": [
     "pi-package",
     "pi",
