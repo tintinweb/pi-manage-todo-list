@@ -47,7 +47,6 @@ export class TodoStateManager {
     }
 
     const validStatuses = new Set(["not-started", "in-progress", "completed"]);
-    let inProgressCount = 0;
 
     for (let i = 0; i < todos.length; i++) {
       const item = todos[i];
@@ -71,15 +70,6 @@ export class TodoStateManager {
       if (!item.status || !validStatuses.has(item.status)) {
         errors.push(`${prefix}: 'status' must be one of: not-started, in-progress, completed`);
       }
-
-      if (item.status === "in-progress") {
-        inProgressCount++;
-      }
-    }
-
-    // Max one in-progress
-    if (inProgressCount > 1) {
-      errors.push(`At most one todo may be 'in-progress' at a time (found ${inProgressCount})`);
     }
 
     return { valid: errors.length === 0, errors };

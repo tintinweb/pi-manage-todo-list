@@ -29,7 +29,7 @@ const TodoItemSchema = Type.Object({
     description: "Detailed context, requirements, or implementation notes. Include file paths, specific methods, or acceptance criteria.",
   }),
   status: StringEnum(["not-started", "in-progress", "completed"] as const, {
-    description: "not-started: Not begun | in-progress: Currently working (max 1) | completed: Fully finished with no blockers",
+    description: "not-started: Not begun | in-progress: Currently working (multiple allowed for parallel work) | completed: Fully finished with no blockers",
   }),
 });
 
@@ -68,14 +68,14 @@ When NOT to use:
 
 CRITICAL workflow:
 1. Plan tasks by writing todo list with specific, actionable items
-2. Mark ONE todo as in-progress before starting work
+2. Mark todo(s) as in-progress before starting work
 3. Complete the work for that specific todo
 4. Mark that todo as completed IMMEDIATELY
 5. Move to next todo and repeat
 
 Todo states:
 - not-started: Todo not yet begun
-- in-progress: Currently working (limit ONE at a time)
+- in-progress: Currently working (multiple allowed for parallel work/subagents)
 - completed: Finished successfully
 
 IMPORTANT: Mark todos completed as soon as they are done. Do not batch completions.`;
@@ -141,11 +141,17 @@ export function createManageTodoListTool(state: TodoStateManager, onUpdate: () =
       const stats = state.getStats();
       const todos = state.read();
 
+      let message = `Todos have been modified successfully. ${stats.completed}/${stats.total} completed. Ensure that you continue to use the todo list to track your progress. Please proceed with the current tasks if applicable.`;
+      
+      if (todoList.length < 3) {
+        message += `\n\nWarning: Small todo list (<3 items). This task might not need a todo list.`;
+      }
+
       return {
         content: [
           {
             type: "text" as const,
-            text: `Todo list updated. ${stats.completed}/${stats.total} completed.`,
+            text: message,
           },
         ],
         details: { operation: "write", todos } as TodoDetails,

@@ -1,6 +1,6 @@
 {
   "name": "pi-manage-todo-list",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A pi extension that replicates GitHub Copilot's manage_todo_list tool",
   "author": "tintinweb",
   "license": "MIT",
