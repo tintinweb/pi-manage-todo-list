@@ -20,11 +20,11 @@
     "task-management",
     "productivity"
   ],
-  "dependencies": {
-    "@mariozechner/pi-coding-agent": "latest",
-    "@mariozechner/pi-tui": "latest",
-    "@mariozechner/pi-ai": "latest",
-    "@sinclair/typebox": "latest"
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@mariozechner/pi-tui": "*",
+    "@mariozechner/pi-ai": "*",
+    "@sinclair/typebox": "*"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
