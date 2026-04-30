@@ -4,8 +4,6 @@ A [Pi](https://pi.dev) extension that replicates VSCode Copilot Chat `manage_tod
 
 > **Heads up:** [pi-tasks](https://github.com/tintinweb/pi-tasks/) is a superior successor to this extension. New users should prefer it.
 
-> **Status:** Production-ready. Faithful replication of Copilot's manage_todo_list with enhanced visual feedback and session persistence.
-
 <img width="600"  alt="image" src="https://github.com/tintinweb/pi-manage-todo-list/raw/master/media/screenshot.png" />
 
 
@@ -96,7 +94,7 @@ The widget displays above your editor:
 **State Management:**
 - In-memory state per session via `TodoStateManager`
 - Persists via `details` field in tool results
-- Auto-reconstructs on session events (start/switch/fork/tree)
+- Auto-reconstructs on `session_start` (covers startup/reload/new/resume/fork) and `session_tree`
 
 **Widget:**
 - Read-only display with progress stats
@@ -123,9 +121,11 @@ The widget displays above your editor:
 
 ## Development
 
-**TypeScript check:**
+**Lint / typecheck / build:**
 ```bash
-npx tsc --noEmit
+npm run lint        # biome check src/
+npm run typecheck   # tsc --noEmit
+npm run build       # tsc → dist/
 ```
 
 **Test with Pi:**

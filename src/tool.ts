@@ -6,7 +6,7 @@
  * - write: Replace the entire todo list (complete replacement, not partial)
  */
 
-import { StringEnum } from "@mariozechner/pi-ai";
+import { type Static, StringEnum, Type } from "@mariozechner/pi-ai";
 import type {
   AgentToolResult,
   AgentToolUpdateCallback,
@@ -15,7 +15,6 @@ import type {
   ToolRenderResultOptions,
 } from "@mariozechner/pi-coding-agent";
 import { Text } from "@mariozechner/pi-tui";
-import { type Static, Type } from "@sinclair/typebox";
 import type { TodoStateManager } from "./state-manager.js";
 import type { TodoDetails } from "./types.js";
 import { STATUS_ICONS } from "./ui/todo-widget.js";
