@@ -26,9 +26,17 @@
     "@mariozechner/pi-ai": "*",
     "@sinclair/typebox": "*"
   },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --fix src/",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run build"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@biomejs/biome": "^2.3.5",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
   },
   "pi": {
     "extensions": ["./src/index.ts"],

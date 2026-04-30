@@ -8,16 +8,16 @@
 
 import { StringEnum } from "@mariozechner/pi-ai";
 import type {
-  Theme,
-  ExtensionContext,
-  AgentToolUpdateCallback,
   AgentToolResult,
+  AgentToolUpdateCallback,
+  ExtensionContext,
+  Theme,
   ToolRenderResultOptions,
 } from "@mariozechner/pi-coding-agent";
 import { Text } from "@mariozechner/pi-tui";
-import { Type, type Static } from "@sinclair/typebox";
-import type { TodoDetails } from "./types.js";
+import { type Static, Type } from "@sinclair/typebox";
 import type { TodoStateManager } from "./state-manager.js";
+import type { TodoDetails } from "./types.js";
 import { STATUS_ICONS } from "./ui/todo-widget.js";
 
 // --- Schema ---

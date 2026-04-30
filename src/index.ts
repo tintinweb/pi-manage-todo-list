@@ -12,7 +12,7 @@
 import type { ExtensionAPI, ExtensionContext } from "@mariozechner/pi-coding-agent";
 import { TodoStateManager } from "./state-manager.js";
 import { createManageTodoListTool } from "./tool.js";
-import { updateWidget, clearWidget } from "./ui/todo-widget.js";
+import { clearWidget, updateWidget } from "./ui/todo-widget.js";
 
 export default function (pi: ExtensionAPI) {
   const state = new TodoStateManager();
