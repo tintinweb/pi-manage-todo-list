@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-05-31
+
+### Changed
+- **Breaking**: pi runtime packages migrated from the `@mariozechner/*` scope to `@earendil-works/*`. Peer deps are now `@earendil-works/pi-ai`, `@earendil-works/pi-coding-agent`, `@earendil-works/pi-tui`, with the floor raised to `>=0.74.0`. Import paths in `src/` updated accordingly.
+
 ## [0.3.0] - 2026-04-30
 
 > Note: [pi-tasks](https://github.com/tintinweb/pi-tasks/) is the recommended successor to this extension.
@@ -51,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Auto-reconstruction from session entries on reload
 - Expandable tool result rendering
 
+[0.4.0]: https://github.com/tintinweb/pi-manage-todo-list/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/tintinweb/pi-manage-todo-list/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/tintinweb/pi-manage-todo-list/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/tintinweb/pi-manage-todo-list/releases/tag/v0.1.0

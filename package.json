@@ -1,6 +1,6 @@
 {
   "name": "pi-manage-todo-list",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A pi extension that replicates GitHub Copilot's manage_todo_list tool",
   "author": "tintinweb",
   "license": "MIT",
@@ -21,21 +21,24 @@
     "productivity"
   ],
   "peerDependencies": {
-    "@mariozechner/pi-ai": ">=0.70.0",
-    "@mariozechner/pi-coding-agent": ">=0.70.0",
-    "@mariozechner/pi-tui": ">=0.70.0"
+    "@earendil-works/pi-ai": ">=0.74.0",
+    "@earendil-works/pi-coding-agent": ">=0.74.0",
+    "@earendil-works/pi-tui": ">=0.74.0"
   },
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "biome check src/",
     "lint:fix": "biome check --fix src/",
-    "prepublishOnly": "npm run lint && npm run typecheck && npm run build"
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.5",
     "@types/node": "^25.6.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^4.0.18"
   },
   "pi": {
     "extensions": [

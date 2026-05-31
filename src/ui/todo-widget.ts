@@ -5,7 +5,7 @@
  * Shows status icons, progress stats, and a flat list.
  */
 
-import type { ExtensionContext } from "@mariozechner/pi-coding-agent";
+import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
 import type { TodoStateManager } from "../state-manager.js";
 
 const WIDGET_ID = "todo-list";

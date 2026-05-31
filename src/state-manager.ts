@@ -5,7 +5,7 @@
  * and reconstructed from session entries on reload.
  */
 
-import type { ExtensionContext } from "@mariozechner/pi-coding-agent";
+import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
 import type { TodoDetails, TodoItem, TodoStats, ValidationResult } from "./types.js";
 
 export class TodoStateManager {
