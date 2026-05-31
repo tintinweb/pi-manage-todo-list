@@ -121,10 +121,11 @@ The widget displays above your editor:
 
 ## Development
 
-**Lint / typecheck / build:**
+**Lint / typecheck / test / build:**
 ```bash
 npm run lint        # biome check src/
 npm run typecheck   # tsc --noEmit
+npm test            # vitest run (end-to-end suite)
 npm run build       # tsc → dist/
 ```
 
@@ -143,6 +144,7 @@ src/
   ui/
     todo-widget.ts  # Read-only widget above editor
   index.ts          # Extension entry point
+test/               # End-to-end vitest suite
 ```
 
 ## Changelog

@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - **Breaking**: pi runtime packages migrated from the `@mariozechner/*` scope to `@earendil-works/*`. Peer deps are now `@earendil-works/pi-ai`, `@earendil-works/pi-coding-agent`, `@earendil-works/pi-tui`, with the floor raised to `>=0.74.0`. Import paths in `src/` updated accordingly.
+- Widget lines are now truncated to the available width via `truncateToWidth`, preventing overflow/wrapping on narrow terminals (#2, thanks @ValentinKaisermayer).
+
+### Added
+- End-to-end test suite (vitest): tool read/write, validation, session reconstruction, `/todos` command, and widget rendering. `test`/`test:watch` scripts; `test` added to `prepublishOnly`.
 
 ## [0.3.0] - 2026-04-30
 
