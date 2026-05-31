@@ -6,6 +6,7 @@
  */
 
 import type { ExtensionContext } from "@earendil-works/pi-coding-agent";
+import { truncateToWidth } from "@earendil-works/pi-tui";
 import type { TodoStateManager } from "../state-manager.js";
 
 const WIDGET_ID = "todo-list";
@@ -58,7 +59,7 @@ export function updateWidget(state: TodoStateManager, ctx: ExtensionContext): vo
     }
 
     return {
-      render: () => lines,
+      render: (width: number) => lines.map((l) => truncateToWidth(l, width)),
       invalidate: () => {},
     };
   });
