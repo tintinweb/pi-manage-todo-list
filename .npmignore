@@ -3,6 +3,8 @@ tsconfig.json
 .vscode/
 .git/
 .gitignore
+.claude
+.github
 
 # Documentation
 PLAN.md
