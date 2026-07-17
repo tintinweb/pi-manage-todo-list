@@ -14,7 +14,7 @@ const WIDGET_ID = "todo-list";
 /** Status icons for each todo state */
 export const STATUS_ICONS: Record<string, string> = {
   "completed": "✓",
-  "in-progress": "◉ ",
+  "in-progress": "◉",
   "not-started": "○",
 };
 

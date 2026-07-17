@@ -114,6 +114,18 @@ describe("progress tracking and widget styling", () => {
     expect(widget).toContain("Task 3");
     expect(widget).not.toContain("~Task 2~");
   });
+
+  it("aligns todo IDs across statuses", async () => {
+    const s = setup();
+    await s.fire("turn_start", s.ctx);
+    await write(s, todos(["completed", "in-progress", "not-started"]));
+
+    expect(renderWidget(s.widgets)?.slice(1)).toEqual([
+      "  ✓ 1. ~Task 1~",
+      "  ◉ 2. Task 2",
+      "  ○ 3. Task 3",
+    ]);
+  });
 });
 
 describe("complete replacement semantics", () => {
